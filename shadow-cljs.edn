@@ -3,11 +3,6 @@
         :modules {:main {:init-fn app.core/main}}
         :output-dir "public/js"
         :target :browser}
-  :cards {:asset-path "/js"
-          :modules {:main {:init-fn app.cards/main}}
-          :compiler-options {:devcards true}
-          :output-dir "public/js"
-          :target :browser}
   :test {:ns-regexp "app.cards"
          :output-to "out/test.js"
          :target :node-test}
@@ -15,7 +10,8 @@
         :output-to "out/e2e.js"
         :target :node-test}}
  :dependencies [[reagent "0.8.1"]
-                [devcards "0.2.6"]]
+                [devcards "0.2.6"]
+                [re-frame "0.2.0"]]
  :dev-http {3000 "public"}
  :nrepl {:port 3333}
  :source-paths ["src"]}
